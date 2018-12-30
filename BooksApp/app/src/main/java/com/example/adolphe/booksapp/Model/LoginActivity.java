@@ -1,7 +1,9 @@
-package com.example.adolphe.booksapp;
+package com.example.adolphe.booksapp.Model;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.adolphe.booksapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
