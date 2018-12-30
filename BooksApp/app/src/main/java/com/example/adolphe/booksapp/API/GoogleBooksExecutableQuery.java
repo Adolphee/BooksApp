@@ -10,7 +10,7 @@ public class GoogleBooksExecutableQuery {
 
 
 
-    public static String createQuery(GoogleBooksQueryPrefix prefix, String query) {
+    private static String createQuery(GoogleBooksQueryPrefix prefix, String query) {
 
         switch(prefix) {
             case TITEL: query = "title:"+query; break;
