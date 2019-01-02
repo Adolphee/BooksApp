@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="textColorBookTitle">#FFFFFF</color>
+    <color name="textColorBookAuthor">#B4BAC0</color>
+    <color name="rating1">#ED3F0C</color>
+    <color name="rating2">#ED970C</color>
+    <color name="rating3">#EAED0C</color>
+    <color name="rating4">#8BED0C</color>
+    <color name="rating5">#0CED2D</color>
 </resources>
