@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/mainbackground"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
-    tools:context=".Model.LoginActivity">
+    tools:context=".Activities.LoginActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
