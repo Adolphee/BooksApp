@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Activities.BookDetailActivity">
 
+    <com.jgabrielfreitas.core.BlurImageView
+        android:id="@+id/bookdetail_blurImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2d2d2d"
+        android:layout_margin="0dp"/>
+
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="514dp"
@@ -23,8 +30,10 @@
                 android:id="@+id/bookdetail_img"
                 android:layout_width="125dp"
                 android:layout_height="170dp"
-                android:background="#2d2d2d"
-                android:scaleType="centerCrop" />
+                android:background="#2d2d"
+                android:scaleType="centerCrop"
+                android:elevation="10dp"
+                android:outlineAmbientShadowColor="@color/rating5"/>
 
             <TextView
                 android:id="@+id/bookdetail_title"
@@ -33,7 +42,11 @@
                 android:layout_marginTop="10dp"
                 android:text="The Beginning (part 2)"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:shadowColor="@color/White"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2" />
 
             <TextView
                 android:id="@+id/bookdetail_subtitle"

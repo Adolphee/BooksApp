@@ -10,4 +10,10 @@
     <color name="rating3">#EAED0C</color>
     <color name="rating4">#8BED0C</color>
     <color name="rating5">#0CED2D</color>
+    <color name="White">#FFF</color>
+    <color name="Black">#000</color>
+    <color name="Grey">#7F7F7F</color>
+    <color name="DarkGrey">#4F4F4F</color>
+    <color name="Green">#0F0</color>
+    <color name="TransparentGrey">#7F000000</color>
 </resources>

@@ -15,14 +15,19 @@ import java.io.InputStream;
 
 // Source: https://stackoverflow.com/questions/2471935/how-to-load-an-imageview-by-url-in-android
 
-public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-    ImageView bmImage;
+// Code werd aangepast om te voldoen aan mijn eisen
 
-    public DownloadImageTask(ImageView bmImage) {
+public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+    private ImageView bmImage;
+    private Bitmap imageBitmap;
+    private Book book;
+
+    public DownloadImageTask(ImageView bmImage, Book book) {
         this.bmImage = bmImage;
+        this.book = book;
     }
 
-    protected Bitmap doInBackground(String... urls) {
+    public Bitmap doInBackground(String... urls) {
         String urldisplay = urls[0];
         Bitmap mIcon11 = null;
         try {
@@ -35,7 +40,12 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         return mIcon11;
     }
 
+    public Bitmap getImageBitmap() {
+        return imageBitmap;
+    }
+
     protected void onPostExecute(Bitmap result) {
         bmImage.setImageBitmap(result);
+        book.setImageBitmap(result);
     }
 }
