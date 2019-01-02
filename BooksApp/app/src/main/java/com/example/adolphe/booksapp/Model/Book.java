@@ -1,5 +1,7 @@
 package com.example.adolphe.booksapp.Model;
 
+import android.graphics.Bitmap;
+
 public class Book {
 
     private String title    ;
@@ -11,6 +13,7 @@ public class Book {
     private String description;
     private Double price    ;
     private String category;
+    private Bitmap imageBitmap;
 
     public Book(String title, String subtitle, String authors, double rating, String url, String imgUrl) {
         this.title      = title;
@@ -64,6 +67,14 @@ public class Book {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public Bitmap getImageBitmap() {
+        return imageBitmap;
+    }
+
+    public void setImageBitmap(Bitmap imageBitmap) {
+        this.imageBitmap = imageBitmap;
     }
 }
 

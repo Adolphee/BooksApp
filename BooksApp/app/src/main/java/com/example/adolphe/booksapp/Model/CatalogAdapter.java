@@ -42,7 +42,8 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
         int colorId = (int) Math.floor(books.get(i).getRating());
         catalogViewHolder.tv_rating.setText(String.valueOf(books.get(i).getRating()));
 
-        new DownloadImageTask(catalogViewHolder.img_book_cover).execute(books.get(i).getImgUrl());
+        DownloadImageTask dl = new DownloadImageTask(catalogViewHolder.img_book_cover, books.get(i));
+        dl.execute(books.get(i).getImgUrl());
 
         catalogViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,7 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
                 intent.putExtra("Subtitle", books.get(i).getSubtitle());
                 intent.putExtra("ImageUrl", books.get(i).getImgUrl());
                 intent.putExtra("Category", books.get(i).getCategory());
+                intent.putExtra("ImageBitmap", books.get(i).getImageBitmap());
                 ctx.startActivity(intent);
             }
         });
