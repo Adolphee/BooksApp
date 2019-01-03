@@ -36,43 +36,33 @@ public class Book {
     public Double getPrice() {
         return price;
     }
-
     public void setPrice(Double price) {
         this.price = price;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
-
     public void setSubtitle(String subtitle) {
         this.subtitle = subtitle;
     }
-
     public void setAuthors(String authors) {
         this.authors = authors;
     }
-
     public void setRating(double rating) {
         this.rating = rating;
     }
-
     public void setUrl(String url) {
         this.url = url;
     }
-
     public String getCategory() {
         return category;
     }
-
     public void setCategory(String category) {
         this.category = category;
     }
-
     public Bitmap getImageBitmap() {
         return imageBitmap;
     }
-
     public void setImageBitmap(Bitmap imageBitmap) {
         this.imageBitmap = imageBitmap;
     }

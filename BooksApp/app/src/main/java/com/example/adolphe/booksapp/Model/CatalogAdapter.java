@@ -2,9 +2,11 @@ package com.example.adolphe.booksapp.Model;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import com.example.adolphe.booksapp.Activities.BookDetailActivity;
 import com.example.adolphe.booksapp.R;
 
+import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder> {
@@ -56,12 +59,12 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
                 intent.putExtra("Subtitle", books.get(i).getSubtitle());
                 intent.putExtra("ImageUrl", books.get(i).getImgUrl());
                 intent.putExtra("Category", books.get(i).getCategory());
-                intent.putExtra("ImageBitmap", books.get(i).getImageBitmap());
+                intent.putExtra("Authors", books.get(i).getAuthors());
+                //intent.putExtra("ImageBitmap", books.get(i).getImageBitmap());
                 ctx.startActivity(intent);
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return books.size();

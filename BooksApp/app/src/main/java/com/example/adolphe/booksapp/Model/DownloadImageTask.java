@@ -2,9 +2,13 @@ package com.example.adolphe.booksapp.Model;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
+
+import com.jgabrielfreitas.core.BlurImageView;
+import com.yinglan.shadowimageview.ShadowImageView;
 
 import java.io.InputStream;
 
@@ -19,6 +23,8 @@ import java.io.InputStream;
 
 public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private ImageView bmImage;
+    private ShadowImageView shadowImageView;
+    private BlurImageView blurImageView;
     private Bitmap imageBitmap;
     private Book book;
 
@@ -27,17 +33,24 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         this.book = book;
     }
 
+    public DownloadImageTask(ShadowImageView bmImage, BlurImageView bi_img_view, Book book) {
+        this.shadowImageView = bmImage;
+        blurImageView = bi_img_view;
+        this.book = book;
+    }
+
     public Bitmap doInBackground(String... urls) {
         String urldisplay = urls[0];
-        Bitmap mIcon11 = null;
+        Bitmap downloadedImage = null;
         try {
             InputStream in = new java.net.URL(urldisplay).openStream();
-            mIcon11 = BitmapFactory.decodeStream(in);
+            downloadedImage = BitmapFactory.decodeStream(in);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
         }
-        return mIcon11;
+        imageBitmap = downloadedImage;
+        return downloadedImage;
     }
 
     public Bitmap getImageBitmap() {
@@ -45,7 +58,17 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     }
 
     protected void onPostExecute(Bitmap result) {
-        bmImage.setImageBitmap(result);
+        if(shadowImageView != null){
+            shadowImageView.setImageBitmap(result);
+            shadowImageView.setImageShadowColor(Color.BLACK);
+            shadowImageView.setImageRadius(75);
+            shadowImageView.setScaleX(2);
+            shadowImageView.setScaleY(2);
+            blurImageView.setImageBitmap(result);
+            blurImageView.setBlur(5);
+        } else if (bmImage != null){
+            bmImage.setImageBitmap(result);
+        }
         book.setImageBitmap(result);
     }
 }
