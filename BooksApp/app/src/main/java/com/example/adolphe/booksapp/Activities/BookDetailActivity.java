@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class BookDetailActivity extends AppCompatActivity {
     private TextView tv_title, tv_description, tv_category, tv_author, tv_rating, tv_subtitle, tv_price;
     private ShadowImageView iv_image;
     private BlurImageView iv_blurry_image;
+    private Button btn_buy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class BookDetailActivity extends AppCompatActivity {
         tv_price = (TextView) findViewById(R.id.bookdetail_price);
         iv_image = (ShadowImageView) findViewById(R.id.bookdetail_img);
         iv_blurry_image = (BlurImageView) findViewById(R.id.bookdetail_blurImage);
+        btn_buy = (Button) findViewById(R.id.bookdetail_buyBtn);
 
         Intent intent = getIntent();
         String title = intent.getExtras().getString("Title");
@@ -55,6 +59,7 @@ public class BookDetailActivity extends AppCompatActivity {
         tv_subtitle.setShadowLayer(2, 3, 3, Color.BLACK);
         tv_author.setShadowLayer(2, 3, 3, Color.BLACK);
         tv_description.setShadowLayer(3, 3, 3, Color.BLACK);
+        btn_buy.setShadowLayer(10, 5, 5, Color.BLACK);
 
         tv_title.setText(title);
         tv_subtitle.setText(subtitle);

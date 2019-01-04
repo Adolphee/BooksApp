@@ -61,11 +61,11 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         if(shadowImageView != null){
             shadowImageView.setImageBitmap(result);
             shadowImageView.setImageShadowColor(Color.BLACK);
-            shadowImageView.setImageRadius(75);
-            shadowImageView.setScaleX(2);
-            shadowImageView.setScaleY(2);
+            shadowImageView.setScaleX(1.75F);
+            shadowImageView.setScaleY(1.75F);
             blurImageView.setImageBitmap(result);
             blurImageView.setBlur(5);
+            blurImageView.setScaleY(2);
         } else if (bmImage != null){
             bmImage.setImageBitmap(result);
         }
