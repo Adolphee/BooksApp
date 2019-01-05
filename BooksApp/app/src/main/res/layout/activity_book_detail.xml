@@ -39,7 +39,7 @@
                 android:id="@+id/bookdetail_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:shadowColor="@color/White"
                 android:shadowDx="1"
                 android:shadowDy="1"
@@ -53,7 +53,7 @@
                 android:id="@+id/bookdetail_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="3dp"
                 android:text="The end  is near the horizon"
                 android:textColor="@color/White"
                 android:textSize="13sp"
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="50dp">
 
                 <TextView
                     android:id="@+id/bookdetail_rating"
