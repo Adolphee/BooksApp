@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
 
+import com.example.adolphe.booksapp.R;
 import com.jgabrielfreitas.core.BlurImageView;
 import com.yinglan.shadowimageview.ShadowImageView;
 
@@ -17,25 +18,15 @@ import java.io.InputStream;
 * voordat ik die kan weergeven in de bookdetail activity
 * */
 
-// Source: https://stackoverflow.com/questions/2471935/how-to-load-an-imageview-by-url-in-android
-
+// Source: StackOverflow
 // Code werd aangepast om te voldoen aan mijn eisen
 
 public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private ImageView bmImage;
-    private ShadowImageView shadowImageView;
-    private BlurImageView blurImageView;
-    private Bitmap imageBitmap;
-    private Book book;
+    private PojoBook book;
 
-    public DownloadImageTask(ImageView bmImage, Book book) {
+    public DownloadImageTask(ImageView bmImage, PojoBook book) {
         this.bmImage = bmImage;
-        this.book = book;
-    }
-
-    public DownloadImageTask(ShadowImageView bmImage, BlurImageView bi_img_view, Book book) {
-        this.shadowImageView = bmImage;
-        blurImageView = bi_img_view;
         this.book = book;
     }
 
@@ -49,26 +40,13 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
         }
-        imageBitmap = downloadedImage;
         return downloadedImage;
     }
 
-    public Bitmap getImageBitmap() {
-        return imageBitmap;
-    }
-
     protected void onPostExecute(Bitmap result) {
-        if(shadowImageView != null){
-            shadowImageView.setImageBitmap(result);
-            shadowImageView.setImageShadowColor(Color.BLACK);
-            shadowImageView.setScaleX(1.75F);
-            shadowImageView.setScaleY(1.75F);
-            blurImageView.setImageBitmap(result);
-            blurImageView.setBlur(5);
-            blurImageView.setScaleY(2);
-        } else if (bmImage != null){
+        if (result != null) {
             bmImage.setImageBitmap(result);
+            book.setImageBitmap(result.getHeight() > 100 && result.getWidth() > 100? result: null);
         }
-        book.setImageBitmap(result);
     }
 }
