@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PojoBook {
+public class Book {
 
     @SerializedName("kind")
     @Expose

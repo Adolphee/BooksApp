@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.adolphe.booksapp.Model.PojoBook;
+import com.example.adolphe.booksapp.Model.Book;
 import com.example.adolphe.booksapp.R;
 import com.google.gson.Gson;
 import com.jgabrielfreitas.core.BlurImageView;
@@ -39,8 +39,8 @@ public class BookDetailActivity extends AppCompatActivity {
         btn_buy = (Button) findViewById(R.id.bookdetail_buyBtn);
 
         Intent intent = getIntent();
-        String jsonBook = intent.getExtras().getString("PojoBook");
-        PojoBook book = new Gson().fromJson(jsonBook, PojoBook.class);
+        String jsonBook = intent.getExtras().getString("Book");
+        Book book = new Gson().fromJson(jsonBook, Book.class);
         tv_title.setShadowLayer(2, 3, 3, Color.BLACK);
         tv_subtitle.setShadowLayer(2, 3, 3, Color.BLACK);
         tv_author.setShadowLayer(2, 3, 3, Color.BLACK);
@@ -91,7 +91,7 @@ public class BookDetailActivity extends AppCompatActivity {
             tv_category.setText(book.getVolumeInfo().getCategories().get(0));
         else  tv_category.setText("Other");
 
-        // Ik heb de prijs al gecontroleerd op nullpointers in de implementatie van Pojobook.getPriceAsString()
+        // Ik heb de prijs al gecontroleerd op nullpointers in de implementatie van Book.getPriceAsString()
         tv_price.setText(book.getPriceAsString());
 
         if(book.getVolumeInfo().getDescription() != null)

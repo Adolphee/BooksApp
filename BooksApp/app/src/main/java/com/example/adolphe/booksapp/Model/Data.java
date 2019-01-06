@@ -1,8 +1,9 @@
 package com.example.adolphe.booksapp.Model;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class Data {
 
@@ -14,7 +15,7 @@ public class Data {
     private Integer totalItems;
     @SerializedName("items")
     @Expose
-    private List<PojoBook> items = null;
+    private List<Book> items = null;
 
     public String getKind() {
         return kind;
@@ -32,11 +33,11 @@ public class Data {
         this.totalItems = totalItems;
     }
 
-    public List<PojoBook> getItems() {
+    public List<Book> getItems() {
         return items;
     }
 
-    public void setItems(List<PojoBook> items) {
+    public void setItems(List<Book> items) {
         this.items = items;
     }
 
