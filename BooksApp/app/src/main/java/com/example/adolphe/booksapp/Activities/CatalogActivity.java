@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import com.example.adolphe.booksapp.API.RFEndpointInterface;
 import com.example.adolphe.booksapp.API.RetroFitSingleton;
+import com.example.adolphe.booksapp.Model.Book;
 import com.example.adolphe.booksapp.Model.CatalogAdapter;
 import com.example.adolphe.booksapp.Model.Data;
-import com.example.adolphe.booksapp.Model.PojoBook;
 import com.example.adolphe.booksapp.R;
 
 import java.util.ArrayList;
@@ -24,14 +24,14 @@ import retrofit2.Retrofit;
 
 public class CatalogActivity extends AppCompatActivity {
 
-    public ArrayList<PojoBook> books;
+    public ArrayList<Book> books;
     RecyclerView rv;
     CatalogAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.catalog_activity);
-        books = new ArrayList<PojoBook>();
+        books = new ArrayList<Book>();
         Button btn_search = (Button) findViewById(R.id.searchBtn);
         TextView tv_search_text = (TextView) findViewById(R.id.searchText);
 
@@ -41,7 +41,7 @@ public class CatalogActivity extends AppCompatActivity {
                 handleSearch(tv_search_text.getText().toString());
             }
         });
-        handleSearch("Aurora Borrealis");
+        handleSearch("Summer Of Anger");
         rv = findViewById(R.id.recyclerview);
         adapter = new CatalogAdapter(getApplicationContext(), books);
         rv.setLayoutManager(new GridLayoutManager(CatalogActivity.super.getApplicationContext(), 2));
@@ -69,7 +69,7 @@ public class CatalogActivity extends AppCompatActivity {
                     return;
                 }
 
-                books = (ArrayList<PojoBook>) response.body().getItems();
+                books = (ArrayList<Book>) response.body().getItems();
 
 
                 if(books == null || books.size() == 0)

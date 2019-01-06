@@ -19,9 +19,9 @@ import java.util.ArrayList;
 public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder> {
 
     public Context ctx;
-    public ArrayList<PojoBook> books;
+    public ArrayList<Book> books;
 
-    public CatalogAdapter(Context ctx, ArrayList<PojoBook> books) {
+    public CatalogAdapter(Context ctx, ArrayList<Book> books) {
         this.ctx = ctx;
         this.books = books;
     }
@@ -61,7 +61,7 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, BookDetailActivity.class);
-                intent.putExtra("PojoBook", new Gson().toJson(books.get(i)));
+                intent.putExtra("Book", new Gson().toJson(books.get(i)));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 ctx.startActivity(intent);
             }

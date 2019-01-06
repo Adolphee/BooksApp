@@ -2,14 +2,9 @@ package com.example.adolphe.booksapp.Model;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
-
-import com.example.adolphe.booksapp.R;
-import com.jgabrielfreitas.core.BlurImageView;
-import com.yinglan.shadowimageview.ShadowImageView;
 
 import java.io.InputStream;
 
@@ -23,9 +18,9 @@ import java.io.InputStream;
 
 public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private ImageView bmImage;
-    private PojoBook book;
+    private Book book;
 
-    public DownloadImageTask(ImageView bmImage, PojoBook book) {
+    public DownloadImageTask(ImageView bmImage, Book book) {
         this.bmImage = bmImage;
         this.book = book;
     }
