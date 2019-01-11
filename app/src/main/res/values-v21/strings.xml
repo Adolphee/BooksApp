@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="AddToCollectionConfirmation">Added to your collection!</string>
+    <string name="mysteriousLookingBook">A mysterious looking book.</string>
+    <string name="other">Other</string>
+    <string name="unknown">Unknown</string>
+    <string name="anonymousAuthor">Anonymous Author</string>
+    <string name="untitledBook">Untitled Book</string>
+    <string name="free">FREE</string>
+    <string name="take_it">Take it!</string>
+    <string name="buy_it">Buy it!</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="REGISTER">REGISTER</string>
+    <string name="SIGN_UP">SIGN UP</string>
+    <string name="noBooksFound">No books :-(</string>
+    <string name="profile">Profile</string>
+    <string name="my_collection">My Collection</string>
+    <string name="catalog">Catalog</string>
+    <string name="communicate">Communicate</string>
+    <string name="search_the_catalog">Search the catalog ...</string>
+    <string name="search_your_collection">Search your collection ...</string>
+    <string name="remove">Remove</string>
+    <string name="removed_from_collection">Removed from collection!</string>
+</resources>

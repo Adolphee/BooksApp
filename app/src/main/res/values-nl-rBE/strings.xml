@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BooksApp</string>
+    <string name="navigation_drawer_open">Open navigatietool</string>
+    <string name="navigation_drawer_close">Sluit navigatietool</string>
+    <string name="title_activity_login">Aanmelden</string>
+    <string name="prompt_password">Wachtwoord</string>
+    <string name="action_sign_in">Aanmelden of registreren</string>
+    <string name="action_sign_in_short">Aaanmelden</string>
+    <string name="error_invalid_email">Deze email adres is geldig</string>
+    <string name="error_invalid_password">Dit wachtwoord is te kort</string>
+    <string name="error_incorrect_password">Dit wachtwoord is fout</string>
+    <string name="error_field_required">Dit veld is vereist</string>
+    <string name="permission_rationale">Contacttoegang is nodig om email automatisch te suggereren</string>
+    <string name="AddToCollectionConfirmation">Toegevoegd aan uw collectie!</string>
+    <string name="mysteriousLookingBook">Een mysterieus boek.</string>
+    <string name="other">Andere</string>
+    <string name="unknown">Onbekend</string>
+    <string name="anonymousAuthor">Annonieme auteur</string>
+    <string name="untitledBook">Titel Ontbreekt</string>
+    <string name="free">Gratis</string>
+    <string name="take_it">Neem het!</string>
+    <string name="buy_it">Koop het!</string>
+    <string name="share">Verstuur</string>
+    <string name="send">Deel</string>
+    <string name="REGISTER">REGISTREER</string>
+    <string name="SIGN_UP">MELD AAN</string>
+    <string name="noBooksFound">Geen boeken :-(</string>
+    <string name="profile">Profiel</string>
+    <string name="my_collection">Mijn Collectie</string>
+    <string name="catalog">Catalogus</string>
+    <string name="communicate">Communicatie</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="search_the_catalog">Doorzoek de catalogus ...</string>
+    <string name="search_your_collection">Doorzoek uw collectie ...</string>
+    <string name="remove">Verwijder</string>
+    <string name="removed_from_collection">Verwijderd van uw collectie!</string>
+</resources>

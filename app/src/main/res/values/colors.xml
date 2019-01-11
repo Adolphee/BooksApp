@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574b</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textColorBookTitle">#FFFFFF</color>
+    <color name="textColorBookAuthor">#B4BAC0</color>
+    <color name="rating1">#ED3F0C</color>
+    <color name="rating2">#ED970C</color>
+    <color name="rating3">#EAED0C</color>
+    <color name="rating4">#8BED0C</color>
+    <color name="rating5">#0cedd3</color>
+    <color name="White">#ffffff</color>
+    <color name="Black">#000</color>
+    <color name="Grey">#7F7F7F</color>
+    <color name="DarkGrey">#4F4F4F</color>
+    <color name="Green">#00ff1e</color>
+    <color name="TransparentGrey">#0002584b</color>
+    <color name="Transparent">#0000ffff</color>
+</resources>
