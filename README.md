@@ -1,4 +1,4 @@
-# Books App, and android project
+# Books App, an android project
 
 One of my assignments in college was to create an Android application that consumes the Google Books API.
 It uses Retrofit to load the json data into POJO Classes and SQLite to store your favorite books locally.
